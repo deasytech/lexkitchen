@@ -5,7 +5,7 @@ import DishCard from "@/components/frontend/cards/dish-card"
 import { getDishDetails } from "@/lib/actions"
 import { useUser } from "@clerk/nextjs"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 const WishList = () => {
   const { user } = useUser();
@@ -31,7 +31,7 @@ const WishList = () => {
     }
   }, [user])
 
-  const getWishlistDishes = async () => {
+  const getWishlistDishes = useCallback(async () => {
     setLoading(true)
 
     if (!signedInUser) return
@@ -43,13 +43,13 @@ const WishList = () => {
 
     setWishlist(wishlistDishes)
     setLoading(false)
-  }
+  }, [signedInUser])
 
   useEffect(() => {
     if (signedInUser) {
       getWishlistDishes()
     }
-  }, [signedInUser])
+  }, [signedInUser, getWishlistDishes])
 
   const updateSignedInUser = (updatedUser: TUser) => {
     setSignedInUser(updatedUser)

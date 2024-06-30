@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import { HeartIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 interface LikeItemProps {
   dishId: string;
@@ -14,11 +14,11 @@ const LikeItem = ({ dishId, updateSignedInUser }: LikeItemProps) => {
   const { user } = useUser();
   const router = useRouter();
 
-  const [ signedInUser, setSignedInUser ] = useState<TUser | null>(null);
-  const [ loading, setLoading ] = useState(false);
-  const [ isLiked, setIsLiked ] = useState(false);
+  const [signedInUser, setSignedInUser] = useState<TUser | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
 
-  const getUser = async () => {
+  const getUser = useCallback(async () => {
     try {
       setLoading(true);
       const res = await fetch("/api/users");
@@ -31,13 +31,13 @@ const LikeItem = ({ dishId, updateSignedInUser }: LikeItemProps) => {
     } finally {
       setLoading(false);
     }
-  }
+  }, [dishId]);
 
   useEffect(() => {
     if (user) {
       getUser();
     }
-  }, [ user ]);
+  }, [user, getUser]);
 
   const handleLike = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -59,8 +59,11 @@ const LikeItem = ({ dishId, updateSignedInUser }: LikeItemProps) => {
       }
     } catch (error) {
       console.log("[wishlist_POST]", error)
+    } finally {
+      setLoading(false);
     }
   }
+
   return (
     <button type="button" onClick={handleLike}>
       <HeartIcon fill={`${isLiked ? "red" : "white"}`} />
