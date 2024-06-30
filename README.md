@@ -120,6 +120,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ### Contact
 For any inquiries, please contact us at:
 - Email: [deasytechsolutions](mailto:deasytechsolutions@gmail.com)
-- Twitter: [@deasytechsolutions](https//:instagram.com/deasytechsolutions)
+- Twitter: [@deasytechsolutions](https://instagram.com/deasytechsolutions)
 
 Thank you for visiting Lexi Kitchen. Enjoy your meals!
