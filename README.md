@@ -39,6 +39,7 @@ Welcome to Lexi Kitchen, an ecommerce platform specializing in delicious, ready-
    ```
 
 3. **Set up environment variables**
+   
    Create a .env.local file in the root of your project and add the following:
 
    ```sh
@@ -103,7 +104,8 @@ Our API allows developers to interact with the Lexi Kitchen platform programmati
 ### Authentication
 - POST **`/api/auth/signup`**: Register a new user.
 - POST **`/api/auth/login`**: Authenticate a user.
-  For detailed API documentation, please refer to the [API Docs](https://nextjs.com).
+
+For detailed API documentation, please refer to the [API Docs](https://nextjs.com).
 
 ### Contributing
 We welcome contributions from the community. To contribute:
@@ -119,4 +121,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 For any inquiries, please contact us at:
 - Email: [deasytechsolutions](mailto//:deasytechsolutions@gmail.com)
 - Twitter: [@lexikitchen](https:instagram.com/deasytechsolutions)
-  Thank you for visiting Lexi Kitchen. Enjoy your meals!
+
+Thank you for visiting Lexi Kitchen. Enjoy your meals!
