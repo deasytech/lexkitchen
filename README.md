@@ -105,7 +105,7 @@ Our API allows developers to interact with the Lexi Kitchen platform programmati
 - POST **`/api/auth/signup`**: Register a new user.
 - POST **`/api/auth/login`**: Authenticate a user.
 
-For detailed API documentation, please refer to the [API Docs](https://nextjs.com).
+For detailed API documentation, please refer to the [API Docs](https://nextjs.org/docs/pages/building-your-application/routing/api-routes).
 
 ### Contributing
 We welcome contributions from the community. To contribute:
@@ -119,7 +119,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ### Contact
 For any inquiries, please contact us at:
-- Email: [deasytechsolutions](mailto//:deasytechsolutions@gmail.com)
-- Twitter: [@lexikitchen](https:instagram.com/deasytechsolutions)
+- Email: [deasytechsolutions](mailto//:deasytechsolutions@gmail.com)[]
+- Twitter: [@deasytechsolutions](https:instagram.com/deasytechsolutions)[]
 
 Thank you for visiting Lexi Kitchen. Enjoy your meals!
