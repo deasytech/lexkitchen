@@ -17,7 +17,7 @@ const Slideshow = () => {
       pagination={{ type: "fraction" }}
       autoplay={{ delay: 5000, pauseOnMouseEnter: true }}
       modules={[ Navigation, Pagination, Autoplay ]}
-      className="w-full h-[600px]"
+      className="w-full max-h-[600px]"
     >
       {SLIDER_IMAGES.map((slide, index) => (
         <SwiperSlide key={index}>
